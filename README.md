@@ -132,7 +132,39 @@ alter table 表名 modify 字段名 新数据类型(长度);
 ```
 alter table 表名 change 旧字段名 新字段名 新数据类型(长度) [comment 注释] [约束]; 
 ```
-
+**案列**  
+将employers表中的nickName字段修改为userName，类型为varchar(30)，
+```
+alter table employers change nickName userName varchar(30);
+```
+删除字段
+```
+alter table 表名 drop 字段名;
+```
+**案列**
+将employers表中的userName删除,
+```
+alter table employers drop userName;
+```
+修改表名   
+```
+alter table 表名 rename to 新表名;
+```
+**案列**
+将employers表改成employees,
+```
+alter table employers rename to employees;
+```
+##### 删除
+删除表
+```
+drop table 表名;
+```
+删除指定表，并重新该表
+```
+truncate table 表名;
+```
+**注意：在删除表的同时，表中的所有数据也全部被删除**
 #### DML
 #### DQL
 #### DCL
